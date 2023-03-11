@@ -31,3 +31,4 @@ jobs:
       - uses: taichi/actions-cfn-diff@main
         with:
           aws-region: ap-northeast-1
+          enable-drift-detection: false
