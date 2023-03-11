@@ -26,8 +26,7 @@ jobs:
       - run: npm run build
       - name: Set up AWS CDK
         run: npm install -g aws-cdk
-      - name: Make Cloudformation Templates
-        run: cdk deploy
+      - run: cdk deploy --require-approval never
       - uses: taichi/actions-cfn-diff@main
         with:
           aws-region: ap-northeast-1
