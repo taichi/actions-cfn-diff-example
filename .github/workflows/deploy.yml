@@ -27,6 +27,3 @@ jobs:
       - name: Set up AWS CDK
         run: npm install -g aws-cdk
       - run: cdk deploy --require-approval never
-      - uses: taichi/actions-cfn-diff@main
-        with:
-          aws-region: ap-northeast-1
