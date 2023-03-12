@@ -24,6 +24,7 @@ export class ApiLambdaCrudDynamoDBStack extends Stack {
         type: AttributeType.STRING,
       },
       tableName: "items",
+      readCapacity: 10,
 
       /**
        *  The default removal policy is RETAIN, which means that cdk destroy will not attempt to delete
