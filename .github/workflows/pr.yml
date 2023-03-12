@@ -31,3 +31,4 @@ jobs:
       - uses: taichi/actions-cfn-diff@main
         with:
           aws-region: ap-northeast-1
+          role-to-assume: arn:aws:iam::282764925290:role/cdk-hnb659fds-lookup-role-282764925290-ap-northeast-1
