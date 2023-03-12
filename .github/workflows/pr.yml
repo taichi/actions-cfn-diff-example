@@ -28,6 +28,7 @@ jobs:
         run: npm install -g aws-cdk
       - name: Make Cloudformation Templates
         run: cdk synth
-      - uses: taichi/actions-cfn-diff@main
+      - uses: taichi/actions-cfn-diff@v1
         with:
           aws-region: ap-northeast-1
+          role-to-assume: arn:aws:iam::282764925290:role/cdk-hnb659fds-lookup-role-282764925290-ap-northeast-1
