@@ -24,6 +24,7 @@ export class ApiLambdaCrudDynamoDBStack extends Stack {
         type: AttributeType.STRING,
       },
       tableName: "items",
+      readCapacity: 10,
 
       /**
        *  The default removal policy is RETAIN, which means that cdk destroy will not attempt to delete
@@ -49,6 +50,7 @@ export class ApiLambdaCrudDynamoDBStack extends Stack {
 
     // Create a Lambda function for each of the CRUD operations
     const getOneLambda = new NodejsFunction(this, "getOneItemFunction", {
+      functionName: "getOneItemFunction",
       entry: join(__dirname, "lambdas", "get-one.ts"),
       ...nodeJsFunctionProps,
     });
